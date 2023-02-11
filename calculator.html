@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* background-color: rgb(236, 228, 228); */
+            background-image: linear-gradient(to right bottom,
+                    rgba(255, 255, 255, 0.7),
+                    rgba(164, 204, 203, 0.3));
+        }
+
+        .box1 {
+            /* background-color: aliceblue; */
+            width: 350px;
+            height: 544px;
+            margin: auto;
+            border: 2px solid grey;
+            margin-top: 50px;
+            /* border-radius: 2rem; */
+            /* z-index: 2; */
+            backdrop-filter: blur(2rem);
+            /* display: inline; */
+            /* background-image: linear-gradient(to right bottom,
+                    rgba(156, 115, 227, 0.7),
+                    rgba(227, 165, 214, 0.3)); */
+                    background-color: rgb(28, 26, 26);
+                    border-radius: 10px;
+
+        }
+
+        .btn {
+            padding: 10px;
+            margin: 13px;
+            height: 53px;
+            width: 56px;
+            border: 1px;
+            border-radius: 35px;
+        }
+        .black{
+            background-color: rgb(67, 64, 64);
+            color: aliceblue;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .orange{
+            background-color: orange;
+            color: rgb(5, 5, 6);
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .result{
+            width: 306px;
+            height: 31px;
+            margin: auto;
+            padding: 4px;
+            margin: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        .box1 div{
+            margin-left: 8px;
+            margin-top: 12px;
+        }
+        .del_all{
+            background-color: rgb(221, 60, 70);
+            color: rgb(5, 5, 6);
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .del{
+            background-color: rgb(233, 79, 79);
+            color: rgb(14, 13, 13);
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .equalt{
+            background-color: rgb(130, 243, 113);
+            color: rgb(5, 5, 6);
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .name{
+            width: 472px;
+            margin: auto;
+            border-radius: 10px;
+            background-color: rgb(229, 212, 234);
+            background-image: linear-gradient(to the right,rgb(237, 105, 209),rgb(108, 60, 231));
+            border: 2px red;
+        }
+        input{
+            box-shadow: 0 0 3px;
+        }
+        input:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="name">
+        <h1>BIKRAM NARAYAN DHANRAJ</h1>
+    </div>
+    <div class="box1">
+        <form>
+            <div>
+                <input type="text" name="display" class="result">
+            </div>
+            <div>
+                <input class="AC btn del_all" type="button" value="AC" onclick="display.value = ' '">
+                <input class="char btn del" type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)">
+                <input class="char btn orange" type="button" value="." onclick="display.value +='.'">
+                <input class="char btn orange" type="button" value="÷" onclick="display.value +=' / '">
+            </div>
+            <div> 
+                <input type="button" class="btn black" value="7" onclick="display.value +='7'">
+                <input type="button" class="btn black" value="8" onclick="display.value +='8'">
+                <input type="button" class="btn black" value="9" onclick="display.value +='9'">
+                <input class="char btn orange" type="button" value=" x " onclick="display.value +=' * '">
+            </div>
+            <div>
+                <input type="button" class="btn black"value="4" onclick="display.value +='4'">
+                <input type="button" class="btn black"value="5" onclick="display.value +='5'">
+                <input type="button" class="btn black" value="6" onclick="display.value +='6'">
+                <input class="char btn orange"  class="btn"type="button" value=" - " onclick="display.value +=' - '">
+            </div>
+            <div>
+                <input type="button" class="btn black" value="1" onclick="display.value +='1'">
+                <input type="button" class="btn black" value="2" onclick="display.value +='2'">
+                <input type="button" class="btn black" value="3" onclick="display.value +='3'">
+                <input class="char btn orange" type="button" value=" + " onclick="display.value +=' + '">
+            </div>
+            <div>
+                <input class="equal btn black"  type="button" value="0" onclick="display.value +='0'">
+                <input class="char btn orange"  type="button" value="^" onclick="display.value += ' ** '">
+                <input class="char btn orange"  type="button" value="%" onclick="display.value += ' % '">
+                <input class="char equal btn equalt" type="button" value=" = " onclick="display.value = eval(display.value)">
+            </div>
+           </form> 
+    </div>
+</body>
+
+</html>
